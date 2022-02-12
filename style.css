@@ -1,0 +1,159 @@
+html,
+body {
+  margin: 0;
+}
+
+html {
+  --dark-main: hsl(217, 54%, 11%);
+  --dark-card: hsl(216, 50%, 16%);
+  --dark-line: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
+  --soft-blue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+
+  --card-radius: 1rem;
+}
+
+body {
+  background-color: var(--dark-main);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Outfit", sans-serif;
+  height: 100vh;
+}
+
+.text-soft-blue {
+  color: var(--soft-blue);
+  opacity: 0.7;
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+.card {
+  border-radius: 1rem;
+  background-color: var(--dark-card);
+  padding: 1.2rem;
+  max-width: 250px;
+  font-size: 18px;
+}
+
+.card-img,
+.card-img:hover,
+.card-img > img,
+.card-title,
+.avatar > p > strong {
+  transition: all 0.2s ease;
+}
+
+.card-img {
+  border-radius: var(--card-radius);
+  max-width: 100%;
+  aspect-ratio: 1;
+  background-image: url("images/image-equilibrium.jpg");
+  background-color: var(--dark-card);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.card-img:hover::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.5;
+  background-color: var(--cyan);
+  border-radius: var(--card-radius);
+}
+
+.card-img > img {
+  display: none;
+}
+
+.card-img:hover {
+  cursor: pointer;
+}
+
+.card-img:hover > img {
+  display: block;
+  z-index: 10;
+}
+
+.card-title {
+  color: var(--white);
+  font-size: 1.2rem;
+}
+
+.card-title:hover,
+.avatar > p > strong:hover {
+  cursor: pointer;
+  color: var(--cyan);
+}
+
+.card-desc {
+  font-size: 0.85rem;
+  margin-bottom: 1rem;
+}
+
+.card-info {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-info-item > img,
+.card-info-item > p {
+  display: inline;
+  vertical-align: middle;
+  font-weight: 700;
+}
+
+.card-info-price {
+  vertical-align: middle;
+  font-size: 0.8rem;
+  color: var(--cyan);
+  opacity: 0.8;
+}
+
+.card-info-price > .icon {
+  width: 0.6rem;
+}
+
+.card-info-time > .icon {
+  width: 0.9rem;
+}
+
+hr {
+  margin-top: 0.8rem;
+  margin-bottom: 0.8rem;
+  border-top: 1px solid var(--soft-blue);
+  border-bottom: none;
+  opacity: 0.3;
+}
+
+.avatar {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: start;
+  align-items: center;
+  column-gap: 0.8rem;
+}
+
+.avatar > img {
+  border-radius: 50%;
+  width: 1.8rem;
+  border: 1px solid var(--white);
+}
+
+.avatar > p > strong {
+  color: var(--white);
+}

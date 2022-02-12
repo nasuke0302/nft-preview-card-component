@@ -1,33 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | NFT preview card component</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-
-  Equilibrium #3429
-
-  Our Equilibrium collection promotes balance and calm.
-
-  0.041 ETH
-  3 days left
-  
-  Creation of Jules Wyvern
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+    <title>Frontend Mentor | NFT preview card component</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="card">
+      <div class="card-img">
+        <img src="images/icon-view.svg" alt="view nft icon" />
+      </div>
+      <!--  <img
+        class="card-img"
+        src="images/image-equilibrium.jpg"
+        alt="equilibrium"
+      /> -->
+      <h2 class="card-title">Equilibrium #3429</h2>
+      <p class="card-desc text-soft-blue">
+        Our Equilibrium collection promotes balance and calm
+      </p>
+      <div class="card-info">
+        <div class="card-info-item card-info-price">
+          <img
+            class="icon"
+            src="images/icon-ethereum.svg"
+            alt="ethereum logo"
+          />
+          <p>0.0041 ETH</p>
+        </div>
+        <div class="card-info-item card-info-time">
+          <img class="icon" src="images/icon-clock.svg" alt="ethereum logo" />
+          <p class="text-soft-blue">3 days left</p>
+        </div>
+      </div>
+      <hr />
+      <div class="avatar">
+        <img src="images/image-avatar.png" alt="Jules Wyvern" />
+        <p class="text-soft-blue">Creation of <strong>Jules Wyvern</strong></p>
+      </div>
+    </div>
+  </body>
 </html>
