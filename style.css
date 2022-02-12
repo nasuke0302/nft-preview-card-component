@@ -30,7 +30,7 @@ body {
   margin: 0;
 }
 
-.card {
+main {
   border-radius: 1rem;
   background-color: var(--dark-card);
   padding: 1.2rem;
